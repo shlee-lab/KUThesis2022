@@ -1,0 +1,122 @@
+% 사용 가능한 옵션 리스트는 아래와 같습니다.
+% 'doctor - master': 박사인가 석사인가
+% 'final': 최종본일 경우 추가
+% 'twosides - oneside': 양면인가 단면인가
+% 'krabst': 국문초록
+% 'krack': 한글 감사의 글
+% 'asym': 홀수쪽과 짝수쪽에 제본 여백을 5mm 주고 반대쪽 여백을 5mm 줄임
+%         대부분의 제본소에서는 중앙에 있는것을 선호함 (제본소 문의 바람)
+%
+% 예제
+% \documentclass[master,final,oneside]{KUThesis}
+% \documentclass[doctor,oneside]{KUThesis}            % draft + oneside
+
+% 기본옵션은 [doctor,twosides,draft] 입니다.
+\documentclass[doctor, final, twosides, krabst]{KUThesis}
+
+\usepackage{kotex}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref} % forcing line break of url in reference
+\usepackage{cleveref}
+\usepackage{comment}
+\usepackage{lipsum}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                   아래 정보를 꼭 바꾸세요!                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 첫 번째 인수의 숫자
+% 0 : 제목이 10자 이하일 경우
+% 1 : 제목이 10자 이상 1줄일 경우
+% 2 : 제목이 2줄 이상일 경우
+% 3 : 제목이 2 셋팅에서도 너무 길 경우
+% 두 번째 인수는 영문 제목, 세 번째 인수는 한글 제목(국문초록 추가할 때 사용)
+\title{2}{
+Korea University Master Thesis \& PhD. Dissertation Template Sample
+}{
+국문 초록을 위해 국문 제목이 여기에 들어갑니다
+}
+
+% 본인의 이름 성,이름 순으로 한글자씩. 한글 이름은 한칸에 모두 적음.
+\author[korean]{이}{학}{생}
+\author[chinese]{李}{學}{生}
+\author[english]{Lee}{Haksaeng}{}
+
+% 지도교수님 성함 {한자이름}{영문이름}
+\advisor{김교수}{金敎授}{Kyosoo Kim}
+
+% 소속표기
+% 1. 한글 학과명 : 띄어쓰기 필수
+% 2. 영문 학과명 : Department of 제외
+% 3. 대학원 이름 : 기본값은 일반 대학원
+\graduateSchool{정 보 보 호 학 과}{Information Security}{Graduate School}
+
+
+% version 2 까지 전공표기방법 (현재 version 3)
+%\department{IS}
+
+% 졸업년월
+\graduateDate{2023}{2}
+
+% 제출 연,월,일
+% 한문 표지에 대한 도서관 안내
+% : 통상적으로 학위논문 표지 날짜는 제출자가 졸업하는 졸업년월((예)2020년 8월, 2021년 2월)
+% : [2021년 8월]처럼 월까지만 기입도 가능, [2021년 8월  일]처럼 비워두는 것은 안 됨
+% 이전에는 심사용 학위논문 제출일/도서관 제출일을 기입하기도 하였음. 정확한 일자는 대학원 행정실에 문의
+\submitDate{2022}{12}{30}
+
+% 인준(심사위원 확인) 연,월,일
+% 도서관 안내: 심사위원 성함이 기재된 인준지에는 학위논문을 심사가 완료된 날짜로 기입하는 경우가 많습니다
+\approvalDate{2022}{11}{8}
+
+% 심사위원 이름 % 영어논문일 경우 영어로 작성
+\referee[1]{Kyosoo Kim}            % 심사위원장
+\referee[2]{Second Kim}
+\referee[3]{Third Kim}            % 심사위원은 최소 3명, 박사학위의 경우 4~5명. 필요시 아래는 주석처리
+\referee[4]{Fourth Kim}
+\referee[5]{Fifth Kim}
+
+% 본문 줄간격 (규정: 170 - 200)
+\captionLineSpacing{150}
+\abstractLineSpacing{200}
+\krAbstractLineSpacing{200}
+\TOCLineSpacing{200}
+\contentLineSpacing{200}
+\acknowledgementLineSpacing{200}
+
+% TOC, LOF, LIT에 헤더를 추가하고 싶은 경우에 주석 해제
+%\addTOCHeader
+
+% 본문에 헤더를 추가하고 싶은 경우에 주석 해제
+%\addContentHeader
+
+% 참고문헌에 헤더를 추가하고 싶은 경우에 주석 해제
+%\addBibHeader
+
+% 스캔한 승인서(.pdf)가 있을 경우 파일 이름 입력. 스캔 파일의 사이즈는 A4/B5이어야 한다.
+%\approvalScan{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                          여기까지!                           %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 단축 키를 모아놓은 파일
+%\include{shortcut}
+
+\usepackage{color}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%         본문 파일을 이 아래에 추가하세요!        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 꼭 addContents함수를 이용해서 추가해야 양면출력이 제대로 됩니다!
+\addContents{sample}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                  여기까지 추가                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
