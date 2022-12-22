@@ -50,4 +50,5 @@ thesis.tex 파일 내부에 설명이 잘 되어 있으니, 따로 설명이 필
 참고 자료
 =========
 
-http://library.korea.ac.kr/link/html/useThesesGuide03
+https://github.com/KUNPL/KUThesis
+https://graduate.korea.ac.kr/community/notice_view.html?no=659&page=1
