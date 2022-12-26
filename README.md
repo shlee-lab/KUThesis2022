@@ -66,14 +66,15 @@ This project is a LaTeX template for Korea University thesis based on 2022 offic
 수정이 필요한 부분
 =====================
 
-* 메인 파일(thesis.tex) -**수정필수!!**
+* 메인 파일(thesis.tex) - **수정필수!!**
   * 저자명 수정(기본값: 이학생 Haksaeng Lee)
   * 지도교수명 수정(기본값: 김교수 Kyosoo Kim)
   * 학위논문 심사위원 명단 수정(기본값: Second Kim, etc.)
   * 학위논문명 수정
   * 소속학과(기본값: Department of Information Security, 정보보호학과), 필요시 대학원명(기본값: Graudate School, 일반대학원) 수정
 
-* 클래스 파일(KUThesis.cls): 학위논문 저자, 교수님 성함, 전공명에 따라 출력되는 줄바꿈 등이 어색할 수 있습니다. 이 경우 에서 직접 해당 부분 줄바꿈(\\\\) 혹은 글자크기(fontsize) 조정 등을 통해 해결하셔야 합니다.
+* 클래스 파일(KUThesis.cls) - 필요에 따라 수정
+  * 학위논문 저자, 교수님 성함, 전공명에 따라 출력되는 줄바꿈 등이 어색할 수 있습니다. 이 경우 에서 직접 해당 부분 줄바꿈(\\\\) 혹은 글자크기(fontsize) 조정 등을 통해 해결하셔야 합니다.
 
 
 
