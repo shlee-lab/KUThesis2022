@@ -2,7 +2,7 @@ Introduction
 ========
 This project is a LaTeX template for Korea University thesis based on 2022 official Korea University guidance
 
-본 프로젝트는 2022 고려대학교 공식 가이드라인에 따른 고려대 학위논문 LaTeX 템플릿입니다
+본 프로젝트는 2022 고려대학교 공식 가이드라인에 따른 비공식 고려대 학위논문 LaTeX 템플릿입니다
 
 
 
