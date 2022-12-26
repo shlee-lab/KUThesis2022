@@ -66,7 +66,7 @@ This project is a LaTeX template for Korea University thesis based on 2022 offic
 수정이 필요한 부분
 =====================
 
-* 메인 파일(thesis.tex) 수정(**필수**)
+* 메인 파일(thesis.tex) (**필수**)
   * 저자명 수정(기본값: 이학생 Haksaeng Lee)
   * 지도교수명 수정(기본값: 김교수 Kyosoo Kim)
   * 학위논문 심사위원 명단 수정(기본값: Second Kim, etc.)
