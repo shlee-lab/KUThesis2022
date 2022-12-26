@@ -5,6 +5,9 @@ This project is a LaTeX template for Korea University thesis based on 2022 offic
 본 프로젝트는 2022 고려대학교 공식 가이드라인에 따른 비공식 고려대 학위논문 LaTeX 템플릿입니다
 
 
+Index
+=========
+1. [제작자](#제작자)
 
 
 제작자
@@ -55,7 +58,7 @@ This project is a LaTeX template for Korea University thesis based on 2022 offic
 * 'asym': 홀수쪽과 짝수쪽에 제본 여백을 5mm 주고 반대쪽 여백을 5mm 줄임. 대부분의 제본소에서는 중앙에 있는것을 선호함 (제본소 문의 바람)
 
 * 예제
-> \documentclass[doctor, final, twosides, krabst]     % 박사학위논문, 최종본, 양면출력, 한글초록 포함
+` \documentclass[doctor, final, twosides, krabst]     % 박사학위논문, 최종본, 양면출력, 한글초록 포함`
 
 > \documentclass[master,final,oneside]{KUThesis}
 
