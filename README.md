@@ -1,7 +1,7 @@
 제작자
 ========
 
-이수현
+##이수현
 * 고려대학교 사이버국방학과 12학번 / 정보보호대학원 17학번 
 * email : d.constructuralism@gmail.com
 * hompage : http://tinyurl.com/suhyeonlee
