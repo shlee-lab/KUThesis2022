@@ -23,7 +23,7 @@ This project is a LaTeX template for Korea University thesis based on 2022 offic
 컴파일 환경/방법
 ===========
 
-이 클래스는 overleaf 에서 테스트가 완료되었습니다.
+이 클래스는 Overleaf[overleaf.com] 에서 테스트가 완료되었습니다.
 
 직접 컴파일 하실경우 아래 문구를 참조하시기 바랍니다.
 > 직접 컴파일 하실 경우 TeXLive 2013 이후 버전에서 동작하며 이전 버전에서는 koTeX 를 따로 설치해야할 수 있습니다. 
