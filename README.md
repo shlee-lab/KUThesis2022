@@ -39,7 +39,7 @@
 헤더 사용방법
 ====================
 
-* 'doctor' / 'master': 박사 / 석사 학위논문
+* 'doctor' / 'master': 박사학위논문(Doctoral Dissertation) / 석사학위논문(Master's Thesis) - 학위논문의 영문명은 고려대 공지사항에 따름
 * 'final': 최종본일 경우 추가
 * 'twosides' / 'oneside': 양면 / 단면 출력
 * 'krabst': 국문초록 포함
