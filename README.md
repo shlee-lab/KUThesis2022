@@ -41,8 +41,8 @@
 
 * 'doctor' / 'master': 박사 / 석사 학위논문
 * 'final': 최종본일 경우 추가
-* 'twosides - oneside': 양면인가 단면인가
-* 'krabst': 국문초록
+* 'twosides' / 'oneside': 양면 / 단면 출력
+* 'krabst': 국문초록 포함
 * 'asym': 홀수쪽과 짝수쪽에 제본 여백을 5mm 주고 반대쪽 여백을 5mm 줄임. 대부분의 제본소에서는 중앙에 있는것을 선호함 (제본소 문의 바람)
 
 * 예제
