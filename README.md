@@ -3,8 +3,8 @@
 
 ### 이수현
 * 고려대학교 사이버국방학과 12학번 / 정보보호대학원 17학번 
-* email : d.constructuralism@gmail.com
-* hompage : http://tinyurl.com/suhyeonlee
+* Email : d.constructuralism@gmail.com
+* Hompage : http://tinyurl.com/suhyeonlee
 * Reference :
   * 고려대 핵물리학연구실(nuclear.korea.ac.kr) 제작 구 학위논문 LaTeX 템플릿 (http://github.com/KUThesis)
   * 고려대학교 일반대학원 공지사항 (https://graduate.korea.ac.kr/community/notice_view.html?no=659)
