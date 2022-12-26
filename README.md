@@ -15,7 +15,7 @@ This project is a LaTeX template for Korea University thesis based on 2022 offic
 * Email : d.constructuralism@gmail.com
 * Hompage : http://tinyurl.com/suhyeonlee
 * Reference :
-  * 고려대 핵물리학연구실(nuclear.korea.ac.kr) 제작 구 학위논문 LaTeX 템플릿 (https://github.com/KUNPL/KUThesis)
+  * 고려대 핵물리학연구실([nuclear.korea.ac.kr](http://nuclear.korea.ac.kr)) 제작 구 학위논문 LaTeX 템플릿 (https://github.com/KUNPL/KUThesis)
   * 고려대학교 일반대학원 공지사항 (https://graduate.korea.ac.kr/community/notice_view.html?no=659)
 
 
