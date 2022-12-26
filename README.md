@@ -39,7 +39,7 @@
 헤더 사용방법
 ====================
 
-* 'doctor - master': 박사인가 석사인가
+* 'doctor' / 'master': 박사 / 석사 학위논문
 * 'final': 최종본일 경우 추가
 * 'twosides - oneside': 양면인가 단면인가
 * 'krabst': 국문초록
@@ -47,7 +47,9 @@
 
 * 예제
 > \documentclass[doctor, final, twosides, krabst] 
+
 > \documentclass[master,final,oneside]{KUThesis}
+
 > \documentclass[doctor,oneside]{KUThesis}            % draft + oneside
 
 
