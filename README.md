@@ -1,46 +1,70 @@
-컴파일 환경
+제작자
+========
+
+이수현
+* 고려대학교 사이버국방학과 12학번 / 정보보호대학원 17학번 
+* email : d.constructuralism@gmail.com
+* hompage : http://tinyurl.com/suhyeonlee
+* Reference :
+  * 고려대 핵물리학연구실(nuclear.korea.ac.kr) 제작 구 학위논문 LaTeX 템플릿 (http://github.com/KUThesis)
+  * 고려대학교 일반대학원 공지사항 (https://graduate.korea.ac.kr/community/notice_view.html?no=659)
+
+
+
+컴파일 환경/방법
 ===========
 
-이 클래스는 TeXLive 2013 이후 버전에서 동작합니다.
+이 클래스는 overleaf 에서 테스트가 완료되었습니다.
 
-이 버전 이후부터 koTeX이 기본 탑재돼 있습니다.
+직접 컴파일 하실경우 아래 문구를 참조하시기 바랍니다.
+> 직접 컴파일 하실 경우 TeXLive 2013 이후 버전에서 동작하며 이전 버전에서는 koTeX 를 따로 설치해야할 수 있습니다. 
+> 유닉스 환경에서는 `make`, 윈도우에서는 `make.bat`을 실행시키면 자동으로 컴파일이 되어 `thesis.pdf`파일이 생성됩니다. 중간에 뭔가 꼬여 처음부터 컴파일을 해야 할 일이 있다면, 유닉스 환경에서는 `make clean`, 윈도에어서는 `clean.bat`을 이용해서 초기화 할 수 있습니다. 이 때 사용자가 작성한 파일들은 날아가지 않으나 항상 조심하는게 좋으니 **백업을 강력하게 권장합니다.**
 
-이전버전의 TeXLive에서 사용할 경우에는 koTeX을 따로 설치해주세요.
 
 
-필수로 있어야 하는 파일
+
+프로젝트 구성요소
 =======================
 
-* 초록: abstract.tex
-* 감사의 글: acknowledgement.tex
-
-위 두 개의 파일은 내용만 수정하면 됩니다.
-
- * 논문 템플릿: KUThesis.cls
-
-템플릿 파일은 사용자가 만지지 않아도 되도록 최선을 다해서 만들었지만, 언제나 예외는 있기에 필요하면 수정하셔도 됩니다.
-
- * 논문 메인 파일:  thesis.tex
-
-처음 한번만 고치면 챕터 추가 외에는 그다지 고칠 일이 없을겁니다.
+(**강조된 글씨는 필수 파일**입니다)
+* **클래스 파일: KUThesis.cls**
+* **메인 파일: thesis.tex**
+* **영문 초록: abstract.tex**
+* 한글 초록: abstract-kr.tex
+* **감사의 글: acknowledgement.tex**
+* **bibTex: library.bib**
+* 더미 파일: sample.tex
 
 
-본인에게 맞게 꼭 수정
+헤더 사용방법
+====================
+
+* 'doctor - master': 박사인가 석사인가
+* 'final': 최종본일 경우 추가
+* 'twosides - oneside': 양면인가 단면인가
+* 'krabst': 국문초록
+* 'asym': 홀수쪽과 짝수쪽에 제본 여백을 5mm 주고 반대쪽 여백을 5mm 줄임. 대부분의 제본소에서는 중앙에 있는것을 선호함 (제본소 문의 바람)
+
+* 예제
+> \documentclass[doctor, final, twosides, krabst] 
+> \documentclass[master,final,oneside]{KUThesis}
+> \documentclass[doctor,oneside]{KUThesis}            % draft + oneside
+
+
+
+수정이 필요한 부분
 =====================
 
-* 논문 메인 파일 : thesis.tex
+* 메인 파일(thesis.tex) 수정(**필수**)
+  * 저자명 수정(기본값: 이학생 Haksaeng Lee)
+  * 지도교수명 수정(기본값: 김교수 Kyosoo Kim)
+  * 학위논문 심사위원 명단 수정(기본값: Second Kim, etc.)
+  * 학위논문명 수정
+  * 소속학과(기본값: Department of Information Security, 정보보호학과), 필요시 대학원명(기본값: Graudate School, 일반대학원) 수정
 
-thesis.tex 파일 내부에 설명이 잘 되어 있으니, 따로 설명이 필요하지 않을 것 같습니다. 
+* 학위논문 저자, 교수님 성함, 전공명에 따라 출력되는 줄바꿈 등이 어색할 수 있습니다. 이 경우 클래스 파일(KUThsis.cls)에서 직접 해당 부분 줄바꿈(\\) 혹은 글자크기 조정 등을 통해 해결하셔야 합니다.
 
-* 참고문헌 목록 : library.bib
 
-참고문헌 목록은 학술지 페이지의 BibTeX 형식으로 제공되는 데이타를 사용하면 됩니다.
-예를들어 http://rmp.aps.org/abstract/RMP/v30/i2/p257_1 페이지에 들어가 보면 중간에 Export 라고 돼 있는 부분 오른쪽에 BibTeX 이라고 돼 있는 버튼을 눌러 다운받을 수 있게 돼 있는데, 그 정보들을 채워넣으면 됩니다. 논문 본문에서는 해당 파일의 첫번째 인자를 사용하면 됩니다. 제시한 예제에서는 첫 번째 인자가 RevModPhys.30.257 이므로, \cite{RevModPhys.30.257}와 같이 사용하면 됩니다.
-
-컴파일 방법
-===========
-
-유닉스 환경에서는 `make`, 윈도우에서는 `make.bat`을 실행시키면 자동으로 컴파일이 되어 `thesis.pdf`파일이 생성됩니다. 중간에 뭔가 꼬여 처음부터 컴파일을 해야 할 일이 있다면, 유닉스 환경에서는 `make clean`, 윈도에어서는 `clean.bat`을 이용해서 초기화 할 수 있습니다. 이 때 사용자가 작성한 파일들은 날아가지 않으나 항상 조심하는게 좋으니 **백업을 강력하게 권장합니다.**
 
 주의
 ====
