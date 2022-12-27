@@ -7,19 +7,13 @@ This project is a LaTeX template for Korea University thesis based on 2022 offic
 
 Index
 =========
-1. [제작자](#제작자)
+[1. 컴파일 환경/방법](#컴파일-환경/방법)
+[2. 프로젝트 구성요소](#프로젝트-구성요소)
+[3. 헤더 사용방법](#헤더-사용방법)
+[4. 수정이 필요한 부분](#수정이-필요한-부분)
+[5. 제작자](#제작자)
+[6. 주의사항](#주의사항)
 
-
-제작자
-========
-
-### 이수현
-* 고려대학교 사이버국방학과 12학번 / 정보보호대학원 17학번 
-* Email : d.constructuralism@gmail.com
-* Hompage : http://tinyurl.com/suhyeonlee
-* Reference :
-  * 고려대 핵물리학연구실([nuclear.korea.ac.kr](http://nuclear.korea.ac.kr)) 제작 구 학위논문 LaTeX 템플릿 (https://github.com/KUNPL/KUThesis)
-  * 고려대학교 일반대학원 공지사항 (https://graduate.korea.ac.kr/community/notice_view.html?no=659)
 
 
 
@@ -58,11 +52,15 @@ Index
 * 'asym': 홀수쪽과 짝수쪽에 제본 여백을 5mm 주고 반대쪽 여백을 5mm 줄임. 대부분의 제본소에서는 중앙에 있는것을 선호함 (제본소 문의 바람)
 
 * 예제
-` \documentclass[doctor, final, twosides, krabst]     % 박사학위논문, 최종본, 양면출력, 한글초록 포함`
 
-> \documentclass[master,final,oneside]{KUThesis}
+박사학위논문, 최종본, 양면출력, 한글초록 포함
+` \documentclass[doctor, final, twosides, krabst]`
 
-> \documentclass[doctor,oneside]{KUThesis}            % draft + oneside
+석사학위논문, 최종본, 단면출력
+` \documentclass[master,final,oneside]{KUThesis}`
+
+박사학위논문, , 단면출력
+` \documentclass[doctor,oneside]{KUThesis}            % draft + oneside
 
 
 
@@ -80,14 +78,21 @@ Index
   * 학위논문 저자, 교수님 성함, 전공명에 따라 출력되는 줄바꿈 등이 어색할 수 있습니다. 이 경우 에서 직접 해당 부분 줄바꿈(\\\\) 혹은 글자크기(fontsize) 조정 등을 통해 해결하셔야 합니다.
 
 
+제작자
+========
+
+### 이수현
+* 고려대학교 사이버국방학과 12학번 / 정보보호대학원 17학번 
+* Email : d.constructuralism@gmail.com
+* Hompage : http://tinyurl.com/suhyeonlee
+* Reference :
+  * 고려대 핵물리학연구실([nuclear.korea.ac.kr](http://nuclear.korea.ac.kr)) 제작 구 학위논문 LaTeX 템플릿 (https://github.com/KUNPL/KUThesis)
+  * 고려대학교 일반대학원 공지사항 (https://graduate.korea.ac.kr/community/notice_view.html?no=659)
+
+
 
 주의
 ====
 
 이 템플릿 파일을 사용해서 발생하는 모든 문제에 대해서 템플릿 작성자들은 어떠한 책임도 지지 않습니다.
 
-참고 자료
-=========
-
-* https://github.com/KUNPL/KUThesis
-* https://graduate.korea.ac.kr/community/notice_view.html?no=659&page=1
