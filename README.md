@@ -75,7 +75,7 @@ Index
 * 메인 파일(thesis.tex) - **수정필수!!**
   * 저자명 수정(기본값: 이학생 Haksaeng Lee)
   * 지도교수명 수정(기본값: 김교수 Kyosoo Kim)
-  * 학위논문 심사위원 명단 수정(기본값: Second Kim, etc.)
+  * 학위논문 심사위원 수  명단 수정(기본값: Second Kim, Third Kim, and etc.)
   * 학위논문명 수정
   * 소속학과(기본값: Department of Information Security, 정보보호학과), 필요시 대학원명(기본값: Graudate School, 일반대학원) 수정
 
