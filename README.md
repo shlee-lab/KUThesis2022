@@ -25,7 +25,7 @@ Index
 컴파일 환경/방법
 ===========
 
-이 클래스는 [Overleaf](http://overleaf.com) 에서 테스트가 완료되었습니다.
+이 클래스는 [Overleaf](http://overleaf.com) 에서 테스트([샘플파일](Korea_University_Thesis_Template.pdf))가 완료되었습니다. 
 
 직접 컴파일 하실경우 아래 문구를 참조하시기 바랍니다.
 > 직접 컴파일 하실 경우 TeXLive 2013 이후 버전에서 동작하며 이전 버전에서는 koTeX 를 따로 설치해야할 수 있습니다. 
