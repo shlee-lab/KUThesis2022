@@ -65,7 +65,7 @@ Index
 ` \documentclass[master,final,oneside]{KUThesis}`
 
 박사학위논문, , 단면출력
-` \documentclass[doctor,oneside]{KUThesis}            % draft + oneside
+` \documentclass[doctor,oneside]{KUThesis}` 
 
 
 
