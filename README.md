@@ -38,23 +38,23 @@ Index
 =======================
 
 (**강조된 글씨**는 **필수 파일**입니다)
-* **클래스 파일: `KUThesis.cls`**
-* **메인 파일: `thesis.tex`**
-* **영문 초록: `abstract.tex`**
-* 한글 초록: `abstract-kr.tex`
-* **감사의 글: `acknowledgement.tex`**
-* **bibTex: `library.bib`**
-* 더미 파일: `sample.tex`
+* **클래스 파일 : `KUThesis.cls`**
+* **메인 파일 : `thesis.tex`**
+* **영문 초록 : `abstract.tex`**
+* 한글 초록 : `abstract-kr.tex`
+* **감사의 글 : `acknowledgement.tex`**
+* **bibTex : `library.bib`**
+* 더미 파일 : `sample.tex`
 
 
 헤더 사용방법
 ====================
 
-* 'doctor' / 'master': 박사학위논문(Doctoral Dissertation) / 석사학위논문(Master's Thesis) - 학위논문의 영문명은 고려대 공지사항에 따름
-* 'final': 최종본일 경우 추가
-* 'twosides' / 'oneside': 양면 / 단면 출력
-* 'krabst': 국문초록 포함
-* 'asym': 홀수쪽과 짝수쪽에 제본 여백을 5mm 주고 반대쪽 여백을 5mm 줄임. 대부분의 제본소에서는 중앙에 있는것을 선호함 (제본소 문의 바람)
+* `doctor` / `master`: 박사학위논문(Doctoral Dissertation) / 석사학위논문(Master's Thesis) - 학위논문의 영문명은 고려대 공지사항에 따름
+* `final`: 최종본일 경우 추가
+* `twosides` / `oneside`: 양면 / 단면 출력
+* `krabst`: 국문초록 포함
+* `asym` : 홀수쪽과 짝수쪽에 제본 여백을 5mm 주고 반대쪽 여백을 5mm 줄임. 대부분의 제본소에서는 중앙에 있는것을 선호함 (제본소 문의 바람)
 
 * 예제
 
