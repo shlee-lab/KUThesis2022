@@ -8,10 +8,15 @@ This project is a LaTeX template for Korea University thesis based on 2022 offic
 Index
 =========
 [1. 컴파일 환경/방법](#컴파일-환경/방법)
+
 [2. 프로젝트 구성요소](#프로젝트-구성요소)
+
 [3. 헤더 사용방법](#헤더-사용방법)
+
 [4. 수정이 필요한 부분](#수정이-필요한-부분)
+
 [5. 제작자](#제작자)
+
 [6. 주의사항](#주의사항)
 
 
