@@ -38,13 +38,13 @@ Index
 =======================
 
 (**강조된 글씨**는 **필수 파일**입니다)
-* **클래스 파일: KUThesis.cls**
-* **메인 파일: thesis.tex**
-* **영문 초록: abstract.tex**
-* 한글 초록: abstract-kr.tex
-* **감사의 글: acknowledgement.tex**
-* **bibTex: library.bib**
-* 더미 파일: sample.tex
+* **클래스 파일: `KUThesis.cls`**
+* **메인 파일: `thesis.tex`**
+* **영문 초록: `abstract.tex`**
+* 한글 초록: `abstract-kr.tex`
+* **감사의 글: `acknowledgement.tex`**
+* **bibTex: `library.bib`**
+* 더미 파일: `sample.tex`
 
 
 헤더 사용방법
@@ -58,13 +58,13 @@ Index
 
 * 예제
 
-박사학위논문, 최종본, 양면출력, 한글초록 포함
-` \documentclass[doctor, final, twosides, krabst]`
+  * 박사학위논문, 최종본, 양면출력, 한글초록 포함
+` \documentclass[doctor, final, twosides, krabst]{KUThesis}`
 
-석사학위논문, 최종본, 단면출력
+  * 석사학위논문, 최종본, 단면출력
 ` \documentclass[master,final,oneside]{KUThesis}`
 
-박사학위논문, , 단면출력
+  * 박사학위논문, , 단면출력
 ` \documentclass[doctor,oneside]{KUThesis}` 
 
 
