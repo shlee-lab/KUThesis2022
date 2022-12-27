@@ -59,13 +59,13 @@ Index
 * 예제
 
   * 박사학위논문, 최종본, 양면출력, 한글초록 포함
-` \documentclass[doctor, final, twosides, krabst]{KUThesis}`
+`\documentclass[doctor, final, twosides, krabst]{KUThesis}`
 
   * 석사학위논문, 최종본, 단면출력
-` \documentclass[master,final,oneside]{KUThesis}`
+`\documentclass[master,final,oneside]{KUThesis}`
 
-  * 박사학위논문, , 단면출력
-` \documentclass[doctor,oneside]{KUThesis}` 
+  * 박사학위논문, 단면출력
+`\documentclass[doctor,oneside]{KUThesis}` 
 
 
 
