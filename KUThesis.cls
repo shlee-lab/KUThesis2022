@@ -41,6 +41,8 @@
 \newif\if@isKrabst
 \newif\if@isKrack
 \newif\if@isAsym
+\newif\if@isLibrary
+
 
 %% 새 옵션 모음 - doctor|master, final|draft
 \DeclareOption{doctor}       {\@isDoctortrue}
@@ -53,6 +55,8 @@
 \DeclareOption{krabst}       {\@isKrabsttrue}
 \DeclareOption{krack}        {\@isKracktrue}
 \DeclareOption{asym}         {\@isAsymtrue}
+\DeclareOption{library}      {\@isLibrarytrue}
+
 
 %% leqno,fleqn,openbib 옵션은 그대로 report 클래스에 전달
 \DeclareOption{leqno}  {\PassOptionsToClass{leqno}  {report}}
@@ -70,6 +74,7 @@
 \@isKrabstfalse
 \@isKrackfalse
 \@isAsymfalse
+\@isLibraryfalse
 \ProcessOptions
 
 %% 11pt,onecolumn,oneside 옵션으로 report 클래스 불러오기
@@ -149,6 +154,9 @@
 \RequirePackage{etoolbox}
 \AfterEndPreamble{                       % \begin{document}와 함께 실행
   \checkparameters                         % 문서 변수가 올바른지 점검
+  \if@isLibrary                        % 도서관 제출용에는 빈 페이지가 들어가면 안됨
+    \let\cleardoublepage\clearpage
+  \fi
   \newgeometry{       left = 40mm,
                      right = 30mm,
                        top = 30mm,
@@ -523,14 +531,18 @@
 %% 양면 출력일 때 홀수 페이질 경우 빈 페이지 추가
 %%
 \newcommand{\addevenpage}{
-  \if@isTwosides
-    \checkoddpage
-    \ifoddpage
-      \emptypage
+    \if@isLibrary
+%% 도서관 제출용에는 빈 페이지가 들어가면 안됨
+    \else
+        \if@isTwosides
+            \checkoddpage
+            \ifoddpage
+            \emptypage
+        \fi
+        \else
+            \newpage
+        \fi
     \fi
-  \else
-    \newpage
-  \fi
 }
 
 %%
@@ -621,13 +633,23 @@
     \newpage
     \renewcommand{\baselinestretch}{1.3}%
     \thispagestyle{empty}
-    \hspace*{-15mm}\begin{minipage}[t][16pt][t]{142mm}
+    \if@isLibrary
+        \hspace*{-7mm}
+    \else
+        \hspace*{-15mm}
+    \fi
+    \begin{minipage}[t][0pt][t]{142mm}
       \begin{center}
         \fontsize{21pt}{21pt}\selectfont\bf{\@titleEng}
         \\[30mm]
       \end{center}
     \end{minipage}\vfill
     \begin{center}
+    \if@isLibrary
+        \hspace*{7mm}
+    \else
+        \hspace*{-13mm}
+    \fi
     \begin{minipage}[b][150mm][c]{112mm} %112
         \begin{center}
             \fontsize{16pt}{16pt}\selectfont{ by}
@@ -721,7 +743,7 @@
   \newpage
   \thispagestyle{empty}
   \addcontentsline{toc}{chapter}{Abstract}
-  \pagenumbering{gobble}
+  \pagenumbering{roman}
   \vspace*{\fill}
   \begin{center}
     \fontsize{16pt}{16pt}\selectfont{\bf Abstract}
@@ -742,7 +764,7 @@
   \newpage
   \thispagestyle{empty}
   \addcontentsline{}{chapter}{국문초록}
-  \pagenumbering{gobble}
+  %\pagenumbering{gobble}
   \begin{center}
     \fontsize{16pt}{16pt}\selectfont{\textbf{국 문 초 록} \\ \, \\ \@titleKor}
   \end{center}
@@ -795,7 +817,7 @@
   \else
     \addcontentsline{toc}{chapter}{Acknowledgement}
   \fi
-  \pagenumbering{gobble}
+  %\pagenumbering{gobble}
   \begin{center}
     \if@isKrack
       \fontsize{16pt}{16pt}\selectfont{\bf 감사의글}
