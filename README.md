@@ -29,8 +29,8 @@ Index
 
 일부 예시 페이지는 다음과 같습니다.
 
-<img src="sample1.jpg" width="80%" height="30%" title="sample1" alt="RubberDuck"></img>
-<img src="sample2.jpg" width="80%" height="30%" title="sample2" alt="RubberDuck"></img>
+<img src="sample1.JPG" width="80%" height="30%" title="sample1" alt="RubberDuck"></img>
+<img src="sample2.JPG" width="80%" height="30%" title="sample2" alt="RubberDuck"></img>
 
 직접 컴파일 하실경우 아래 문구를 참조하시기 바랍니다.
 > 직접 컴파일 하실 경우 TeXLive 2013 이후 버전에서 동작하며 이전 버전에서는 koTeX 를 따로 설치해야할 수 있습니다. 
