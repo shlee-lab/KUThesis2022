@@ -25,7 +25,7 @@ Index
 컴파일 환경/방법
 ===========
 
-이 클래스는 [Overleaf](http://overleaf.com) 에서 테스트가 완료되었습니다. 컴파일 결과물은 여기([Sample PDF](Korea_University_Thesis_Template.pdf))에서 확인해주세요.
+이 클래스는 [Overleaf](http://overleaf.com) 에서 테스트가 완료되었습니다. 현재 Overleaf Template 으로 등록하기 위한 절차를 밟고 있습니다. 컴파일 결과물은 여기([Sample PDF](Korea_University_Thesis_Template.pdf))에서 확인해주세요.
 
 일부 예시 페이지는 다음과 같습니다.
 
