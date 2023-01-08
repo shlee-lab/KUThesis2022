@@ -27,6 +27,11 @@ Index
 
 이 클래스는 [Overleaf](http://overleaf.com) 에서 테스트가 완료되었습니다. 컴파일 결과물은 여기([Sample PDF](Korea_University_Thesis_Template.pdf))에서 확인해주세요.
 
+일부 예시 페이지는 다음과 같습니다.
+
+<img src="sample1.jpg" width="80%" height="30%" title="sample1" alt="RubberDuck"></img>
+<img src="sample2.jpg" width="80%" height="30%" title="sample2" alt="RubberDuck"></img>
+
 직접 컴파일 하실경우 아래 문구를 참조하시기 바랍니다.
 > 직접 컴파일 하실 경우 TeXLive 2013 이후 버전에서 동작하며 이전 버전에서는 koTeX 를 따로 설치해야할 수 있습니다. 
 > 유닉스 환경에서는 `make`, 윈도우에서는 `make.bat`을 실행시키면 자동으로 컴파일이 되어 `thesis.pdf`파일이 생성됩니다. 중간에 뭔가 꼬여 처음부터 컴파일을 해야 할 일이 있다면, 유닉스 환경에서는 `make clean`, 윈도에어서는 `clean.bat`을 이용해서 초기화 할 수 있습니다. 이 때 사용자가 작성한 파일들은 날아가지 않으나 항상 조심하는게 좋으니 **백업을 강력하게 권장합니다.**
