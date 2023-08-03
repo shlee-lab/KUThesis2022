@@ -7,17 +7,17 @@ This project is a LaTeX template for a Korea University thesis based on the 2022
 
 Index
 =========
-[1. 컴파일 환경/방법 (Compile Environment/Method)](#컴파일-환경/방법-(Compile-Environment/Method))
+[1. 컴파일 환경/방법 (Compile Environment/Method)](#컴파일-환경/방법-Compile-Environment/Method)
 
-[2. 프로젝트 구성요소 (Project Components)](#프로젝트-구성요소-(Project-Components))
+[2. 프로젝트 구성요소 (Project Components)](#프로젝트-구성요소-Project-Components)
 
 [3. 헤더 사용방법 (How to Use Headers)](#헤더-사용방법-How-to-Use-Headers)
 
-[4. 수정이 필요한 부분 (Files to Edit)](#수정이-필요한-부분-(Files-to-Edit))
+[4. 수정이 필요한 부분 (Files to Edit)](#수정이-필요한-부분-Files-to-Edit)
 
-[5. 제작자 (Author)](#제작자-(Author))
+[5. 제작자 (Author)](#제작자-Author)
 
-[6. 주의사항 (Precaution)](#주의사항-(Precaution))
+[6. 주의사항 (Precaution)](#주의사항-Precaution)
 
 
 
