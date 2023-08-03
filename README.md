@@ -11,7 +11,7 @@ Index
 
 [2. 프로젝트 구성요소 (Project Components)](#프로젝트-구성요소-(Project-Components))
 
-[3. 헤더 사용방법 (How to Use Headers)](#헤더-사용방법-(How-to-Use-Headers))
+[3. 헤더 사용방법 (How to Use Headers)](#헤더-사용방법-How-to-Use-Headers)
 
 [4. 수정이 필요한 부분 (Files to Edit)](#수정이-필요한-부분-(Files-to-Edit))
 
