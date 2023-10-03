@@ -1,6 +1,6 @@
 KUThesis 2022
 ========
-This project is a LaTeX template for a Korea University thesis based on the 2022 official Korea University Guidance
+This project is a LaTeX template for a Korea University thesis based on the 2022 official Korea University Guideline
 
 본 프로젝트는 2022 고려대학교 공식 가이드라인에 따른 비공식 고려대 학위논문 LaTeX 템플릿입니다
 
