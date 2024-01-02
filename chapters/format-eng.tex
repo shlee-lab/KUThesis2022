@@ -1,0 +1,344 @@
+
+%%% first chapter of the main body
+
+\chapter{Introduction}\label{chap:intro}
+\pagenumbering{arabic} % set the page number as Arabic type from this page on.
+The following formatting information is intended to illustrate several acceptable ways of preparing a thesis or dissertation for your convenience.
+
+Chapter \ref{chap:intro} is styled with \verb|\chapter{Introduction}|. \par
+You can put \verb|\label{chap:intro}| to refer to this chapter.
+
+%%
+\section{Second Level Heading}\label{sec:section}
+
+Section \ref{sec:section} is styled with \verb|\section{Second Level Heading}|. \par
+You can put \verb|\label{sec:section}| and \verb|\ref{sec:section}| to label and refer to this section.
+Sections will appear in the Table of Contents, automatically.
+
+%
+\subsection{Third Level Heading}\label{subs:subsection}
+Subsection \ref{subs:subsection} is styled with \verb|\subsection{Third Level Heading}|.
+%You can put \verb|\label{subs:subsection}| and \verb|\ref{subs:subsection}| to label and refer to this subsection.
+Subsections will appear in the Table of Contents, automatically.
+
+For more information about headings, refer to \url{https://www.overleaf.com/learn/latex/Headers_and_footers}
+
+This template isn’t the only way to list titles, subheadings, numbering, etc.
+It’s just one example that may work for you and it is not mandatory or even recommended.
+
+%
+\section{Referencing Headings}\label{sec:referencing}
+Suppose that you want to refer to the first section.
+The first section (of the first chapter) was labeled with \verb|\label{sec:section}|.
+You can refer to the section by typing \verb|\ref{sec:section}| : Section \ref{sec:section}
+
+Suppose that you want to refer to the first subsection.
+The first subsection (of the first section of the first chapter) was labeled with \verb|\label{subs:subsection}|.
+You can refer to the subsection by typing \verb|\ref{subs:subsection}| : Subsection \ref{subs:subsection}
+
+For more information about labeling and referencing, refer to the followings.
+\begin{itemize}
+\item
+\url{https://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing}
+\item
+\url{https://www.overleaf.com/learn/latex/Cross_referencing_sections%2C_equations_and_floats}
+\end{itemize}
+
+%%%  the second chapter of the main body
+\chapter{Format}\label{chap:organizing}
+
+%%
+\section{Paper Size and Margins} \label{sec:papersize}
+The paper sizee\index{paper size} of the thesis/dissertation shall be B5.
+For the first three preliminary pages (including the cover page, title page, and signature page) before the abstract, all margins (top, bottom, left, and right) shall be at least 3 cm.
+From the abstract on, the top and bottom margins\index{margin} shall be at least 3cm, and the left and right margins shall be at least 2 cm (Table \ref{tab: Organizing and formatting}).
+\bigskip
+
+The paper size and margins are governed by the \text{geometry} package.
+For more information, refer to the following
+\begin{itemize}
+\item
+\url{http://mirrors.ctan.org/macros/latex/contrib/geometry/geometry.pdf}
+\item
+\url{https://www.overleaf.com/learn/latex/Page_size_and_margins}
+\end{itemize}
+
+\begin{table}
+% \begin{table}[h]\centering
+\caption{Organizing and formatting thesis/dissertation}
+\label{tab: Organizing and formatting}
+\bigskip
+\begin{tabular}{cccc}
+\toprule
+\textbf{Order}&\textbf{Note}&\textbf{Margin}&\textbf{Pagination}\\\midrule
+Cover page&&\multirow{4}{2.5cm}{\centering top, bottom, left \& right at least 3 cm}&\multirow{4}{2.5cm}{\centering None}\\\cmidrule(lr){1-2}
+Title page&&\\\cmidrule(lr){1-2}
+Signature page&&\\\midrule
+Abstract&both English \& Korean&\multirow{13}{2.5cm}{\centering top \& bottom at least 3cm\\[\baselineskip] left \& right at least 2 cm}\\\cmidrule(lr){1-2}
+Dedication page&optional&&\multirow{8}{2.5cm}{i, ii, iii, iv, \(\cdots\)}\\\cmidrule(lr){1-2}
+Preface&if necessary\\\cmidrule(lr){1-2}
+Acknowledgements&optional\\\cmidrule(lr){1-2}
+Table of contents&\\\cmidrule(lr){1-2}
+List of tables&\multirow{2}{4cm}{\centering if there are tables or figures in the main body}&\\\cmidrule(lr){1-1}
+List of figures&&\\\cmidrule(lr){1-2}
+Nomenclature&optional\\\cmidrule(lr){1-2}\cmidrule(lr){4-4}
+Main body&&&\multirow{4}{2.5cm}{1, 2, 3, 4, \(\cdots\)}\\\cmidrule(lr){1-2}
+Reference&\\\cmidrule(lr){1-2}
+Appendices&optional&\\\cmidrule(lr){1-2}
+Index&optional&\\\bottomrule
+\end{tabular}
+\end{table}
+
+\newpage
+
+%%
+\section{Fonts and Size}\label{sec:font}
+
+The default font size is set to 11pt.
+In \LaTeX, you can use commands like \verb|\normalsize|, \verb|\Large|, \verb|\LARGE|, \verb|\huge|, and so on, to specify the size of the font.
+We relate the above commands to 11pt, 14pt, 18pt and 21pt, respectively, of the MS word template.
+In addition, the following command was used to express 16pt. \par
+\verb| \fontsize{size}{baselineskip}\selectfont |
+
+Thus, there are slight differences in font size in MS word template and in \LaTeX ~ template
+(Table \ref{tab:font size}). 
+
+\begin{table}
+% \begin{table}[h]\centering
+\caption{Requirement for font size and the style used in the \LaTeX template Requirement for font size and the style used in the \LaTeX template}\label{tab:font size}
+\bigskip
+\begin{tabular}{>{\centering\arraybackslash}p{5.5cm}p{2.5cm}p{2.5cm}p{1.5cm}}
+\toprule
+&Size \par requirements & \LaTeX \par command & \LaTeX \par size \\\midrule
+Thesis title			&21&\verb|\huge| & 20.74 \\\midrule
+The school name (Graduate School, Korea University)
+					&18&\verb|\LARGE| & 17.28 \\\midrule
+All other parts are 16 points (department, name, advisor, master's thesis, \(\cdots\), submitted, \(\cdots\) completed, etc.)	
+					&16&\verb|\fontsize| \par \verb|{16pt}{16pt}| \par \verb|\selectfont|  & 16 \\\midrule
+
+Year, month and day	&14&\verb|\Large| & 14.4  \\\midrule
+Main Text			&10--12&\verb|\normalsize| & 10.95 \\\midrule
+Heading				&None&\\\midrule
+Figure caption			&None&\\\midrule
+Table caption			&None&\\\bottomrule
+\end{tabular}
+\end{table}
+
+%%
+\section{Tables and Figures}\label{sec:table_figure}
+The font, size, alignment method, numbering method, etc. of table or figure titles can be modified, appropriately. For example, <Table 1> and <Figure 1> can also be used. Also, the style of the table (thickness and color of the border, etc.) can be modified. It is common to place figure titles below the figure and table titles above the table.
+
+To make a table, use the environment \texttt{tabular} and specify the columns.
+The above table has three center-aligned columns ;
+\begin{verbatim}
+\begin{tabular}{ccc} ... \end{tabular}
+\end{verbatim}
+
+You can also use an advanced version of \texttt{tabular}, which are \texttt{taubularx}, \texttt{tabulary}, \texttt{tabu}, \texttt{multirow} or \texttt{booktabs} to manipulate the typeset of tables.
+
+It is desirable to put the \texttt{tabular} environment inside the \texttt{table} environment.
+You can add a caption of the table by \verb|\caption{...}|.
+The labeling \verb|\label{...} | for future reference should be followed just after the caption.
+All the tables in the \texttt{table} environment will be included in the `List of Tables'.
+
+For more information about tables, refer to \par
+\begin{itemize}
+\item \url{https://www.overleaf.com/learn/latex/Tables}
+\end{itemize}
+
+It is also possible to use \LaTeX ~ tables generator.  \par
+\begin{itemize}
+\item
+\url{https://www.tablesgenerator.com/}
+\end{itemize}
+
+\newpage
+
+To include a figure file in the document, you can use \texttt{includegraphics} command, which requires \texttt{graphicx} package.
+\begin{verbatim}
+\includegraphics[width=.2\textwidth]{kumark.png}
+\end{verbatim}
+
+You can specify the width or the height of the figure inside the square brackets and the file name (with or without the extension) inside the braces.
+
+It is desirable to put the \texttt{includegraphics} command inside the \texttt{figure} environment.
+Again, the labeling needs to be followed just after the caption.
+All the tables in the \texttt{figure} environment will be included in the `List of Figures'.
+\bigskip
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=.2\textwidth]{figures/kumark.png}
+\end{center}
+\caption{Korea University Global Symbol}
+\label{fig:kumark}
+\end{figure}
+
+For more information about figures, refer to the following
+\begin{itemize}
+\item
+\url{https://www.overleaf.com/learn/latex/Inserting_Images}
+\item
+\url{https://www.overleaf.com/learn/latex/How_to_Write_a_Thesis_in_LaTeX_(Part_3)%3A_Figures%2C_Subfigures_and_Tables}
+\end{itemize}
+
+
+\section{Equations}\label{sec:equation}
+
+You can type an equation with inline math mode like \(E=mc^2\). % or $E=mc^2$.
+Or you can type
+\[E=mc^2\]
+% or $$E=mc^2.$$
+% or
+%\begin{equation*}
+%E=mc^2
+%\end{equation*}
+to express the equation in display math mode.
+The above equation is unnumbered.
+To number the equation automatically, you can use \texttt{equation} environment;
+\begin{equation}
+E=mc^2
+\end{equation}
+
+The number or the tag of the above equation reads `the first equation of the chapter \ref{chap:organizing}'.
+If you add one more equation, you can get the second equation of the chapter \ref{chap:organizing}.
+\begin{equation}
+e^{i\theta}=\cos\theta+i\sin\theta.
+\end{equation}
+
+You can also specify the tagging explicitly, using \verb|\tag{...}|
+\[E=mc^2\tag{$*$}\]
+
+To express a list of equations, you can use the \texttt{gather} environment, which just enumerates equations vertically.
+For example, suppose that you want to express a system of linear equations \(x+y+z=3\), \(x-y+2z=1\), \(x+3z=2\).
+Using \texttt{gather} environment, you get
+\begin{gather}
+x+y+z=3\\
+x-y+2z=1\\
+x+3z=2.
+\end{gather}
+
+If you want to un-number the equations, use \texttt{gather*} environment;
+\begin{gather*}
+x+y+z=3\\
+x-y+2z=1\\
+x+3z=2.
+\end{gather*}
+
+Note that the above system is not well aligned.
+To align the equations horizontally, with respect to the equality sign, you can use \texttt{align} (or \texttt{align*}) environment
+\begin{align*}
+x+y+z&=3\\
+x-y+2z&=1\\
+x+3z&=2.
+\end{align*}
+
+\texttt{align} environment tags every equation of the system
+\begin{align}
+x+y+z&=3\\
+x-y+2z&=1\\
+x+3z&=2.
+\end{align}
+
+If you want one tagging for the system, you can use the \texttt{aligned} environment and the \texttt{equation} environment, simultaneously ;
+\begin{equation}\label{eq:system}
+\begin{aligned}
+x+y+z&=3\\
+x-y+2z&=1\\
+x+3z&=2.
+\end{aligned}
+\end{equation}
+
+Finally, you can label and refer to an equation, by \verb|\label{...}| and \verb|\eqref{...}|.
+For example, you can say that `The root of \eqref{eq:system} is \(x=2\), \(y=1\), \(z=0\)'.
+\texttt{gather} and \texttt{align} are the environments provided by the \texttt{amsmath} package.
+For more information to typeset the equation neatly, refer to \url{http://www.ams.org/arc/tex/amsmath/amsldoc.pdf}.
+
+%%
+
+\section{Footnotes and Endnotes}\label{sec:footnotes_endnotes}
+
+Footnotes\footnote{The usage of footnotes is different or limited depending on the field of study. The usage of footnotes is recommended only when you’re sure how a footnote should be used in your field.} can be included to provide additional information about the content. Footnotes should be placed at the bottom of the page separated from the text by a solid line and referenced through a superscript number.
+
+
+
+%%
+\section{Quotation}
+If you want to cite from the bibliography, you can type, for example, \verb|\cite{LSTM}| where \texttt{LSTM} is the name of the reference: \cite{LSTM}.
+Or you can cite the other reference here like this; \cite{pure}.
+
+For direct quotation, you can use either the \texttt{quote} environment or the \texttt{quotation} environment.
+\begin{quote}
+“Learn from yesterday, live for today, hope for tomorrow. The important thing is not to stop questioning.” \par
+― Albert Einstein 
+\end{quote}
+
+\begin{quotation}
+“Learn from yesterday, live for today, hope for tomorrow. The important thing is not to stop questioning.” \par
+― Albert Einstein 
+\end{quotation}
+
+%%
+\section{Definitions and Theorems}
+
+If you want to make definitions and theorems in the paper, use the predefined (in the preamble) environments \texttt{definition} and \texttt{theorem} which are supported by the \texttt{amsthm} package.
+
+You can either specify the name of the definition
+\begin{definition}[Right Triangles]
+A right triangle is a triangle in which one angle is a right angle.
+\end{definition}
+or not (don't specify the name of the definition)
+\begin{definition}
+A right triangle is a triangle in which one angle is a right angle.
+\end{definition}
+
+Here are examples of theorems ;
+\begin{theorem}[Pythagorean theorem]
+Consider a right triangle where \(c\) is the length of the hypotenuse, and \(a\) and \(b\) are the lengths of the remaining two sides.
+Then
+\begin{equation}
+a^2+b^2=c^2
+\end{equation}
+\end{theorem}
+
+\begin{theorem}
+Consider a right triangle where \(c\) is the length of the hypotenuse, and \(a\) and \(b\) are the lengths of the remaining two sides.
+Then
+\begin{equation}
+a^2+b^2=c^2
+\end{equation}
+\end{theorem}
+For later use, we put indexings for a right traingle\index{right traingle} and the Pythagorean theorem\index{pythagorean theorem} here.
+
+Sometimes you need to special font for mathematical use.
+For example, you may need symbols like \(\mathbb R\), \(\mathcal T\), \(\mathscr A\) or \(\mathfrak M\).
+Some symbols are typeseted without declaring any packages, while others need packages like \text{amssymb} or \text{mathrsfs}.
+For more information about typsetting mathematical expressions, refer to the followings ;
+
+\small
+
+\begin{itemize}
+\item
+\url{https://www.overleaf.com/learn/latex/Mathematical_expressions}
+\item
+\url{https://www.overleaf.com/learn/latex/Subscripts_and_superscripts}
+\item
+\url{https://www.overleaf.com/learn/latex/Brackets_and_Parentheses}
+\item
+\url{https://www.overleaf.com/learn/latex/Matrices}
+\item
+\url{https://www.overleaf.com/learn/latex/Integrals\%2C_sums_and_limits}
+\item
+\url{https://www.overleaf.com/learn/latex/Display_style_in_math_mode}
+\item
+\url{https://www.overleaf.com/learn/latex/Mathematical_fonts}
+\end{itemize}
+
+\normalsize
+
+
+
+
+%%% the third chapter of the main body
+\chapter{Conclusion}\label{chap:conclusion}
+The conclusion starts here.

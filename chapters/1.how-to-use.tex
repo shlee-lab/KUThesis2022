@@ -1,0 +1,90 @@
+\setchapter{1}{템플릿 사용 방법}
+
+
+\section{소개}
+이 문서는 2022 고려대학교 공식 가이드라인에 따른 고려대 학위논문 LaTeX 템플릿인 'KUThesis 2022'의 사용법을 안내합니다. 본 템플릿은 overleaf template(\url{https://www.overleaf.com/latex/templates})에 등록되어 편리하게 사용할 수 있습니다. 
+
+\section{주요기능}
+본 템플릿은 석사논문, 박사논문, 양면, 단면, \textbf{ \textcolor{red}{도서관 제출양식} } 등을 편리하게 선택할 수 있어 학위논문 작성, 심사 및 제출절차의 불필요한 노력을 줄여드립니다.
+
+
+\section{컴파일 환경/방법}
+이 클래스는 Overleaf (\url{http://overleaf.com})에서 테스트되었습니다. 컴파일 결과물은 \href{Korea_University_Thesis_Template.pdf}{여기에서 확인}해주세요.
+
+\section{기타 컴파일 방법}
+TeXLive 2013 이후 버전에서 동작합니다. 유닉스 환경에서는 `make`, 윈도우에서는 `make.bat`을 실행하여 컴파일할 수 있습니다. 초기화는 `make clean` 또는 `clean.bat`을 사용합니다. 백업은 강력히 권장합니다.
+
+
+\section{프로젝트 구성요소}
+본 템플릿에는 다음과 같은 구성요소가 포함되어 있습니다:
+\begin{itemize}
+  \item 클래스 파일: \texttt{KUThesis.cls}
+  \item 메인 파일: \texttt{thesis.tex}
+  \item 영문 초록: \texttt{abstract.tex}
+  \item 한글 초록: \texttt{abstract-kr.tex}
+  \item 감사의 글: \texttt{acknowledgement.tex}
+  \item bibTex: \texttt{library.bib}
+  \item 더미 파일: \texttt{sample.tex}
+\end{itemize}
+
+\section{헤더 사용방법}
+템플릿을 사용할 때 다음과 같은 옵션들을 지정할 수 있습니다:
+
+\subsection{옵션들}
+\begin{itemize}
+  \item `doctor` / `master`: 박사학위논문 / 석사학위논문
+  \item `final` / `draft`: 최종 버전 / 드래프트
+  \item `library`: 도서관 제출본
+  \item `twosides` / `oneside`: 양면 / 단면 출력
+  \item `krabst`: 국문초록 포함
+  \item `asym`: 제본 여백 조정
+\end{itemize}
+
+
+\subsection{사용 예}
+
+\begin{itemize}
+    \item \verb|[doctor, final, twosides, krabst, library]|: 박사학위논문, 도서관 제출용, 양면출력, 한글초록 포함 (추천)
+    \item \verb|[doctor, final, twosides, krabst]|: 박사학위논문, 최종 제본용, 양면출력, 한글초록 포함 (추천)
+    \item \verb|[master,final,oneside]|: 석사학위논문, 최종본, 단면출력
+    \item \verb|[doctor,oneside]|: 박사학위논문, 단면출력
+\end{itemize}
+
+
+
+\section{수정이 필요한 부분}
+본 템플릿을 사용하기 위해서는 다음 파일들을 수정해야 합니다:
+\begin{itemize}
+  \item 메인파일 \texttt{thesis.tex}
+  \begin{itemize}
+      \item 저자명
+      \item 지도교수명
+      \item 심사위원 명단
+      \item 학위논문명
+      \item 소속학과, 소속대학원(일반대학원이 아닌 경우)
+  \end{itemize}
+  
+  \item 클래스파일 \texttt{KUThesis.cls}
+  \begin{itemize}
+      \item 학위논문 저자, 교수님 성함, 전공명에 따라 출력되는 줄바꿈 등이 어색할 수 있습니다. 이 경우는 직접 해당 부분 줄바꿈(\textbackslash\textbackslash) 혹은 글자크기(fontsize) 조정 등을 통해 해결하셔야 합니다.
+  \end{itemize}
+  
+\end{itemize}
+
+\section{제작자}
+\begin{itemize}
+    \item Suhyeon Lee (이수현)
+    \item Email: \texttt{orion-alpha\_at\_korea.ac.kr}
+    \item Homepage: \url{http://shlee-lab.github.io}
+    \item Reference:
+    \begin{itemize}
+        \item 고려대 핵물리학연구실(\url{http://nuclear.korea.ac.kr}) 제작 구 학위논문 LaTeX 템플릿 (\url{https://github.com/KUNPL/KUThesis})
+        \item 고려대학교 일반대학원 학위논문 양식 공지사항 \url{https://graduate.korea.ac.kr/academic/dissertation.html}
+    \end{itemize}
+\end{itemize}
+
+\section{주의사항}
+작성자는 이 템플릿을 사용하여 실제 학위논문 제출이 아무지장이 없었으나 지도교수나 도서관 담당분의 재량, 학교 정책 등에 의하여 학위 논문 제출에는 여러 요구가 있을 수 있습니다. 이 템플릿을 사용함으로써 발생하는 모든 문제에 대해 작성자는 책임을 지지 않으니 항상 여유시간을 가지고 제출하여 불상사가 발생하지 않도록 주의 바랍니다.
+
+
+

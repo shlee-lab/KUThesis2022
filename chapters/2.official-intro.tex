@@ -1,0 +1,31 @@
+\setchapter{2}{고려대 공식 가이드}
+
+\textbf{본 챕터부터는 고려대 일반대학원 공식 템플릿 가이드에 나온 내용을 옮겨 적었다. 일부 수정된 부분이나 추가된 내용은} \textcolor{blue}{파란색 글씨}\textbf{로 표시하였다.} \bigskip
+
+장, 절, 항 제목의 글꼴, 크기, 정렬방식, 번호매기기 방식 등은 학문분야의 특성에 부합하도록 변경하여 사용한다. \par
+본문부터 페이지 번호는 아라비아 숫자(Arabic numbers, e.g., 1, 2, 3...)를 사용한다.\par
+또한, 장 제목, 절 제목, 항 제목의 글꼴, 글꼴 크기, 정렬 방식, 자간 및 장평 등은 수정 가능하며, 장, 절, 항의 표현 방식 또한 수정 가능하다. \par
+\bigskip
+예시 1: Ⅰ(장), 1(절), 가, 1), 가) 의 순서 \par
+예시 2: 제1장, 제1절, 로마자1, 숫자1, 한글 '가', (1), 1) ...의 순서 \par
+\bigskip
+
+%장(chapter)을 표시할 때 Chapter를 없애기 위해 \verb|\chapter*{O장. 장제목}|을 사용하였다.\par
+%그리고 절, 항을 표시할 때 장의 번호를 부여하기 위해 \verb|\setcounter{chapter}{장번호}|을 사용하였다.\par
+\textcolor{blue}{ 장(chapter)을 표시할 때 Chapter 표시, 장의 번호부여, section 및 subsection의 카운터 초기화 등의 명령어를 한줄로 표시하기 위해 } \verb|\setchapter*{장 번호}{장 제목}}| \textcolor{blue}{ 을 사용한다. 예시: } \verb|\setchapter{1}{Introduction}}| \par
+
+
+%%
+\section{절 제목}\label{sec:section}
+절(section)을 만들기 위해 \verb|\section{절 제목}|을 사용하였다.
+이 절을 라벨링 하기 위해서는 \verb|\label{sec:section}|와 같은 명령어를 사용할 수 있다.
+이 템플릿에서 제공하는 장, 절, 항의 양식은 하나의 예시일 뿐이다.
+따라서 이 양식을 꼭 따라야 할 필요는 없다.
+
+%
+\subsection{항 제목}\label{subs:subsection}
+항(subsection)을 만들기 위해 \verb|\subsection{항 제목}|을 사용였다.
+이 항을 라벨링 하기 위해서는 \verb|\label{subs:subsection}|와 같은 명령어를 사용할 수 있다.
+
+장, 절, 항들은 목차에 자동적으로 표시된다.
+

@@ -18,8 +18,7 @@
 \PassOptionsToPackage{hyphens}{url}\usepackage{hyperref} % forcing line break of url in reference
 \usepackage{cleveref}
 \usepackage{comment}
-\usepackage{lipsum}
-
+\usepackage{blindtext}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                   아래 정보를 꼭 바꾸세요!                   %
@@ -32,18 +31,18 @@
 % 3 : 제목이 2 셋팅에서도 너무 길 경우
 % 두 번째 인수는 영문 제목, 세 번째 인수는 한글 제목(국문초록 추가할 때 사용)
 \title{2}{
-Korea University Master Thesis \& PhD. Dissertation Template Sample
+Korea University Master Thesis \& Ph.D. Dissertation Template Sample
 }{
 국문 초록을 위해 국문 제목이 여기에 들어갑니다
 }
 
 % 본인의 이름 성,이름 순으로 한글자씩. 한글 이름은 한칸에 모두 적음.
-\author[korean]{이}{학}{생}
+\author[korean]{이}{수}{현}
 \author[chinese]{李}{學}{生}
-\author[english]{Lee}{Haksaeng}{}
+\author[english]{Lee}{Suhyeon}{}
 
 % 지도교수님 성함 {한자이름}{영문이름}
-\advisor{김교수}{金敎授}{Kyosoo Kim}
+\advisor{김지도}{金指導}{Advisor Name}
 
 % 소속표기
 % 1. 한글 학과명 : 띄어쓰기 필수
@@ -58,23 +57,21 @@ Korea University Master Thesis \& PhD. Dissertation Template Sample
 % 졸업년월
 \graduateDate{2023}{2}
 
-% 제출 연,월,일
-% 한문 표지에 대한 도서관 안내
-% : 통상적으로 학위논문 표지 날짜는 제출자가 졸업하는 졸업년월((예)2020년 8월, 2021년 2월)
-% : [2021년 8월]처럼 월까지만 기입도 가능, [2021년 8월  일]처럼 비워두는 것은 안 됨
-% 이전에는 심사용 학위논문 제출일/도서관 제출일을 기입하기도 하였음. 정확한 일자는 대학원 행정실에 문의
-\submitDate{2022}{12}{30}
+% 속표지에 표시되는 심사용 학위논문 제출 연,월,일
+% [2021년 8월]처럼 월까지만 기입도 가능, [2021년 8월  일]처럼 비워두는 것은 안 됨
+% 안내사항에 대한 혼동이 있을시 정확한 일자는 대학원 행정실에 문의
+\submitDate{2022}{10}{30}
 
 % 인준(심사위원 확인) 연,월,일
 % 도서관 안내: 심사위원 성함이 기재된 인준지에는 학위논문을 심사가 완료된 날짜로 기입하는 경우가 많습니다
 \approvalDate{2022}{11}{8}
 
 % 심사위원 이름 % 영어논문일 경우 영어로 작성
-\referee[1]{Kyosoo Kim}            % 심사위원장
-\referee[2]{Second Kim}
-\referee[3]{Third Kim}            % 심사위원은 최소 3명, 박사학위의 경우 4~5명. 필요시 아래는 주석처리
-\referee[4]{Fourth Kim}
-\referee[5]{Fifth Kim}
+\referee[1]{First Professor Name}            % 심사위원장
+\referee[2]{Second Professor Name}
+\referee[3]{Third Professor Name}            % 심사위원은 최소 3명, 박사학위의 경우 4~5명. 필요시 아래는 주석처리
+\referee[4]{Fourth Professor Name}
+\referee[5]{Fifth Professor Name}
 
 % 본문 줄간격 (규정: 170 - 200)
 \captionLineSpacing{150}
@@ -104,7 +101,27 @@ Korea University Master Thesis \& PhD. Dissertation Template Sample
 %\include{shortcut}
 
 \usepackage{color}
+\usepackage{geometry, graphicx, kotex, imakeidx, titlesec, array} % necessary packages
+\usepackage{mathptmx}   
+\usepackage{amsmath, amsthm, amssymb, mathrsfs, multirow, verbatim} % supplementary packages
+\usepackage[nobiblatex]{xurl} % enable linebreak of \url command
+\usepackage{indentfirst} % force indentation at every first paragraph of chapters, sections and subsections
+\usepackage{booktabs} % table tool
+\usepackage{ragged2e}
+\usepackage{setspace}
 
+\newtheorem{theorem}{Theorem} % theorem environment
+\newtheorem{definition}{Definition} % definition environment
+
+% 챕터 시작마다 section 설정 등 여러줄의 명령어를 생략하기 위한 새로운 setchapter 명령 정의
+% #1: 장 번호, #2: 장 제목
+\newcommand{\setchapter}[2]{
+    \chapter*{Chapter #1. #2}
+    \addcontentsline{toc}{chapter}{Chapter #1. #2}
+    \setcounter{chapter}{#1}
+    \setcounter{section}{0}
+    \setcounter{subsection}{0}
+}
 \begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -112,11 +129,19 @@ Korea University Master Thesis \& PhD. Dissertation Template Sample
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % 꼭 addContents함수를 이용해서 추가해야 양면출력이 제대로 됩니다!
-\addContents{sample}
+%\addContents{chapters/how-to-use}
+\addContents{chapters/1.how-to-use}
+\addContents{chapters/2.official-intro}
+\addContents{chapters/3.official-format}
+\addContents{chapters/4.conclusion}
+
+%\addContents{chapters/format-eng}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                  여기까지 추가                   %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 
 \end{document}

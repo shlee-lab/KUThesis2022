@@ -673,7 +673,7 @@
             \fontsize{\@univSize}{\@univSize}\selectfont{\bf \@koreauniv}
             \\[10mm]
             \fontsize{14pt}{14pt}\selectfont{\bf
-            \@dateUSenglish{\@graduateYear}{\@graduateMonth}}
+            \@dateUSenglish{\@submitYear}{\@submitMonth}}
         \end{center}
     \end{minipage}
     \end{center}
@@ -751,7 +751,7 @@
 
   \setlength\parindent{5mm}
   \renewcommand{\baselinestretch}{\@abstractLineRatio}\selectfont
-  \fontsize{11pt}{12pt}\selectfont{\indent\input{abstract}}
+  \fontsize{11pt}{12pt}\selectfont{\indent\input{abstract/abstract}}
   \setlength\parindent{0mm}
   \vspace*{\fill}
   \addevenpage
@@ -779,7 +779,7 @@
 
   \setlength\parindent{5mm}
   \renewcommand{\baselinestretch}{\@krAbstractLineRatio}\selectfont
-  \fontsize{11pt}{12pt}\selectfont{\indent\input{abstract-kr}}
+  \fontsize{11pt}{12pt}\selectfont{\indent\input{abstract/abstract-kr}}
   \setlength\parindent{0mm}
   \vspace*{\fill}
   \addevenpage

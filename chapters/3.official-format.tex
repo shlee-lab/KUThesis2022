@@ -1,0 +1,167 @@
+
+\setchapter{3}{학위논문의 양식}
+
+
+장을 표시할 때 Chapter를 없애기 위해 \verb|\chapter*{O장. 장제목}|을 사용하였다. 그리고 절, 항을 표시할 때 장의 번호를 부여하기 위해 \verb|\setcounter{chapter}{장번호}|을 사용하였다. 그리고 절, 항의 번호를 동일한 명령어를 사용하여 초기화하였다.\par
+
+\section{학위논문의 순서} \label{sec:order}
+
+학위논문\index{학위논문}은 논문 표지, 속표지, 심사완료검인서, 초록, 감사의 글(선택), 서문(필요시), 사사(선택), 목차, 표목차(본문에 표가 포함된 경우), 그림목차(본문에 그림이 포함된 경우), 기호설명(선택), 본문, 참고문헌, 부록(선택), 색인(선택)의 순서로 한다.
+
+%%
+\section{용지 크기, 여백 및 페이지 설정} \label{sec:papersize}
+논문의 규격은 4·6배판(B5)로 하는 것을 원칙으로 한다. 컽표지, 속표지, 심사완료검인서의 아래쪽, 위쪽, 오른쪽, 왼쪽의 여백은 3cm 이상으로 한다. 초록부터 페이지 여백은 아래쪽, 위쪽, 3cm 이상 오른쪽, 왼쪽 2cm 이상으로 한다. 페이지 번호는 초록부터 본문 전까지 작은 로마 숫자(Roman numerals, e.g., i, ii, iii, iv...)를 사용하며, 본문의 서론부터 아라비아 숫자(Arabic numbers, e.g., 1, 2 , 3...)를 사용한다. 
+
+\renewcommand\tablename{표}
+\begin{table}
+% \begin{table}[h]\centering
+\caption{학위논문의 순서, 여백, 페이지 매기기}
+\label{tab:Organizing and formatting}
+\bigskip
+\begin{tabular}{cccc}
+\toprule
+\textbf{순서}&\textbf{비고}&\textbf{여백}&\textbf{페이지 매기기}\\\midrule
+겉표지&&\multirow{4}{2.5cm}{\centering 위, 아래, 오른쪽, 왼쪽 모두 3 cm 이상}&\multirow{4}{2.5cm}{\centering 없음}\\\cmidrule(lr){1-2}
+속표지&&\\\cmidrule(lr){1-2}
+심사완료검인서&&\\\midrule
+초록 & 국문 및 영문 &\multirow{13}{2.5cm}{\centering 위, 아래 \par 3cm 이상\\[\baselineskip] 오른쪽, 왼쪽 2cm 이상}\\\cmidrule(lr){1-2}
+감사의 글&선택&&\multirow{8}{2.5cm}{i, ii, iii, iv, \(\cdots\)}\\\cmidrule(lr){1-2}
+서문 & 필요한 경우 \\\cmidrule(lr){1-2}
+사사& 선택 \\\cmidrule(lr){1-2}
+목차&\\\cmidrule(lr){1-2}
+표 목차 &\multirow{2}{4cm}{\centering 본문에 표나 \par 그림이 있는 경우}&\\\cmidrule(lr){1-1}
+그림 목차&&\\\cmidrule(lr){1-2}
+기호설명& 선택\\\cmidrule(lr){1-2}\cmidrule(lr){4-4}
+본문&&&\multirow{4}{2.5cm}{1, 2, 3, 4, \(\cdots\)}\\\cmidrule(lr){1-2}
+침고문헌 &\\\cmidrule(lr){1-2}
+부록 &선택&\\\cmidrule(lr){1-2}
+색인&선택&\\\bottomrule
+\end{tabular}
+\end{table}
+
+
+\newpage
+
+
+
+\section{글꼴} \label{sec:font}
+국문 학위논문은 명조체\index{명조체}, 고딕체 혹은 이와 유사한 서체, 영문 학위논문은 Times New Roman, Calibri\index{Calibri} 혹은 이와 유사한 서체를 사용하여 작성하며, 본문의 글꼴의 크기는 10-12 포인트로 하며, 자간 및 장평, 들여쓰기는 조정 가능하다. 줄간 또한 조정 가능하며, 1.5줄에서 2.5줄 정도로 설정하는 것이 일반적이다. \par 
+본 \LaTeX{} 템플릿은 기본 글꼴을 사용하였다.\par 
+16 포인트 크기를 아래 명령어를 사용하여 추가하였다. \par
+\verb|\newcommand\extrasize{\fontsize{16pt}{16pt}\selectfont}| 
+
+
+\begin{table}
+% \begin{table}[h]\centering
+\caption{\LaTeX 템플릿 글꼴 크기}\label{tab:font size}
+\bigskip
+\begin{tabular}{>{\centering\arraybackslash}p{5.4cm}p{2.4cm}p{2.5cm}p{1.6cm}}
+\toprule
+&글꼴 크기 \par 요구사항 & \LaTeX \par 명령어 & \LaTeX \par 글꼴 크기 \\\midrule
+논문제목			&21&\verb|\huge| & 20.74 \\\midrule
+학교이름(고려대학교)
+					&18&\verb|\LARGE| & 17.28 \\\midrule
+기타 내용 (학과명, 이름, 지도교수, \(\cdots\), 제출함, \(\cdots\), 완료함,등)	
+					&16&\verb|\extrasize| & 16  \\\midrule
+연, 월	&14&\verb|\Large| & 14.4 \\\midrule
+본문			&10--12&\verb|\normalsize| & 10.95 \\\midrule
+장, 절, 항 제목				&없음&\\\midrule
+그림 제목			&없음&\\\midrule
+표 제목			&없음&\\\midrule
+각주 			&없음&\verb|\footnotesize| & 9 \\\midrule
+첨자 			&없음&\verb|\scriptsize| & 8 \\\bottomrule
+
+
+\end{tabular}
+\end{table}
+
+
+
+%%
+\newpage
+\section{그림과 표}\label{sec:figures_and_table}
+
+그림을 삽하기 위해서는 \texttt{includegraphics}와 같은 명령어를 사용할 수 있으며, 이 명령어를 사용하기 위해서는 \texttt{graphicx} 패키지가 필요하다.
+\texttt{includegraphics} 명령은 \texttt{figure} 환경 안에 넣는 것이 바람직하다.
+\texttt{figure} 환경에 포함된 모든 그림들은 `그림 목록'에 포함된다.
+
+\renewcommand\figurename{그림}
+\begin{figure}
+\begin{center}
+\vspace{0.5cm}
+\includegraphics[width=.2\textwidth]{figures/kumark.png}
+\end{center}
+\caption{고려대 심벌}
+\end{figure}
+
+표나 그림 제목의 글꼴, 크기, 정렬방식, 번호매기기 방식 등은 학문분야의 특성에 부합하도록 변경하여 사용한다. 표나 그림은 본문 전체에 대해 연속적인 번호를 부여(1, 2, 3, 4, 5...) 하거나, 각 장(Chapter)에 기반하여 번호를 부여(1.2, 1.2, 2.1, 2.2...) 할 수 있으며, <표 1>, <그림 1> 등 다른 방식으로 작성도 가능하다. 또한, 표의 스타일(색상, 테두리 등)은 수정 가능하다. 그림 제목은 그림 아래에 표 제목은 표 위에 두는 것이 일반적이며, 학위논문이 국문으로 작성되더라도, 표나 그림 제목은 영문으로 작성될 수 있다. \par
+
+\bigskip
+
+표를 만들기 위해 LaTeX tables generator와 같은 프로그램 사용도 가능하다. \par
+\begin{itemize}
+\item
+\url{https://www.tablesgenerator.com/}
+\end{itemize}
+
+
+
+\section{수식}\label{sec:equation}
+
+\begin{equation}
+E=mc^2
+\end{equation}
+\begin{equation}
+e^{i\theta}=\cos\theta+i\sin\theta.
+\end{equation}
+
+위의 식번호들은 해당 수식이 두번째 장의 첫번째, 두번째 수식임을 나타내고 있다. 여러 개의 수식을 입력할 때, 각각의 수식들에 대해 식번호를 부여할 수도 있고 연립방정식\index{연립방정식} 전체에 대하여 식번호를 하나 부여할 수도 있다.
+\begin{align}
+x+y+z&=3\\
+x-y+2z&=1\\
+x+3z&=2
+\end{align}
+\begin{equation}
+\begin{aligned}
+x+y+z&=3\\
+x-y+2z&=1\\
+x+3z&=2
+\end{aligned}
+\end{equation}
+
+\section{인용} \label{sec:quotation}
+
+\textcolor{blue}{ 논문에서 인용은 일반적인 인용방법과 직접인용을 나눌 수 있다. }
+
+\subsection{인용}
+
+\textcolor{blue}{ 일반적인 인용에서는 }
+\verb|library.tex| 
+\textcolor{blue}{ 파일에 }
+\verb|bibtex| 
+\textcolor{blue}{ 포맷으로 인용논문의 내용을 추가한 뒤 }
+\verb|\cite|
+\textcolor{blue}{ 를 사용하여 이번 문장과 같이 적절한 곳에 인용을 하는 방법을 권장한다} \cite{LSTM, pure}.
+
+\subsection{직접인용}
+직접 인용을 하는 경우 글자체를 달리하거나, 좌우 여백을 두고 본문 중 줄 바꾸기를 하는 것이 일반적이다.\par
+\bigskip
+
+\begin{quote}
+“오늘의 대학생은 무엇을 자임하는가? 학문에의 침잠을 방패 삼아 이 참혹한 민족적 현실에 눈감으려는 경향은 없는가? (중략) 오늘의 대학생은 무엇을 자임하여야 할 것인가? 다시 한 번 우리는 민족의 지사, 구국의 투사로서 자임해야 할 시기가 왔다.” \par
+― 조지훈의  「오늘의 대학생은 무엇을 자임하는가」중에서 
+\end{quote}
+\bigskip
+
+\begin{quotation}
+“오늘의 대학생은 무엇을 자임하는가? 학문에의 침잠을 방패 삼아 이 참혹한 민족적 현실에 눈감으려는 경향은 없는가? (중략) 오늘의 대학생은 무엇을 자임하여야 할 것인가? 다시 한 번 우리는 민족의 지사, 구국의 투사로서 자임해야 할 시기가 왔다.” \par
+― 조지훈의  「오늘의 대학생은 무엇을 자임하는가」중에서 
+\end{quotation}
+
+\newpage
+
+\section{각주}\label{sec:footnotes}
+
+본문의 어떤 부분의 뜻을 보충하기 위해 필요한 경우 본문의 아래쪽에 각주\footnote{하지만, 각주는 학문 분야에 따라 다르게 사용되거나 제한되므로, 해당 분야의 정확한 각주 사용법을 아는 경우에만 적용을 권장한다.}를 삽입할 수 있다.
+
+
