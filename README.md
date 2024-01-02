@@ -1,31 +1,40 @@
 KUThesis 2022
 ========
-This project is a LaTeX template for Korea University thesis based on 2022 official Korea University guidance
+This project is a LaTeX template for a Korea University thesis based on the 2022 official Korea University Guideline
 
-본 프로젝트는 2022 고려대학교 공식 가이드라인에 따른 비공식 고려대 학위논문 LaTeX 템플릿입니다
+본 프로젝트는 2022 고려대학교 공식 가이드라인에 따른 비공식 고려대 학위논문 LaTeX 템플릿입니다. 
+
+석사, 박사 학위 버전, 양면, 단면 등 원하는 포맷으로 전환이 쉬우며, 특히 '도서관 포맷'이 기능을 통한 도서관 제출본 생성기능이 장점입니다.
+
+현재 [Overleaf template](https://www.overleaf.com/latex/templates/korea-university-thesis-template/bbjrjsnqyqrq) 에 등록되어 있어 손쉽게 이용하실 수 있습니다.
 
 
 Index
 =========
-[1. 컴파일 환경/방법 (Compile Environment/Method)](#컴파일-환경/방법)
+[1. 컴파일 환경/방법 (Compile Environment/Method)](#컴파일-환경/방법-Compile-Environment/Method)
 
-[2. 프로젝트 구성요소 (Project Components)](#프로젝트-구성요소)
+[2. 프로젝트 구성요소 (Project Components)](#프로젝트-구성요소-Project-Components)
 
-[3. 헤더 사용방법 (How to Use Headers)](#헤더-사용방법)
+[3. 헤더 사용방법 (How to Use Headers)](#헤더-사용방법-How-to-Use-Headers)
 
-[4. 수정이 필요한 부분 (Files to Edit)](#수정이-필요한-부분)
+[4. 수정이 필요한 부분 (Files to Edit)](#수정이-필요한-부분-Files-to-Edit)
 
-[5. 제작자 (Author)](#제작자)
+[5. 제작자 (Author)](#제작자-Author)
 
-[6. 주의사항 (Precaution)](#주의사항)
-
-
+[6. 주의사항 (Precaution)](#주의사항-Precaution)
 
 
-컴파일 환경/방법
+
+
+컴파일 환경/방법 (Compile Environment/Method)
 ===========
 
-이 클래스는 [Overleaf](http://overleaf.com) 에서 테스트가 완료되었습니다. 컴파일 결과물은 여기([Sample PDF](Korea_University_Thesis_Template.pdf))에서 확인해주세요.
+이 클래스는 [Overleaf](http://overleaf.com) 에서 테스트가 완료되었습니다. 현재 Overleaf Template 으로 등록하기 위한 절차를 밟고 있습니다. 컴파일 결과물은 여기([Sample PDF](sample.pdf))에서 확인해주세요.
+
+일부 예시 페이지는 다음과 같습니다.
+
+<img src="sample1.png" width="80%" height="30%" title="sample1" alt="RubberDuck"></img>
+<img src="sample2.png" width="80%" height="30%" title="sample2" alt="RubberDuck"></img>
 
 직접 컴파일 하실경우 아래 문구를 참조하시기 바랍니다.
 > 직접 컴파일 하실 경우 TeXLive 2013 이후 버전에서 동작하며 이전 버전에서는 koTeX 를 따로 설치해야할 수 있습니다. 
@@ -34,7 +43,7 @@ Index
 
 
 
-프로젝트 구성요소
+프로젝트 구성요소 (Project Components)
 =======================
 
 (**강조된 글씨**는 **필수 파일**입니다)
@@ -47,18 +56,24 @@ Index
 * 더미 파일 : `sample.tex`
 
 
-헤더 사용방법
+헤더 사용방법 (How to Use Headers)
 ====================
 
-* `doctor` / `master`: 박사학위논문(Doctoral Dissertation) / 석사학위논문(Master's Thesis) - 학위논문의 영문명은 고려대 공지사항에 따름
-* `final`: 최종본일 경우 추가
-* `twosides` / `oneside`: 양면 / 단면 출력
-* `krabst`: 국문초록 포함
+* `doctor` / `master` : 박사학위논문(Doctoral Dissertation) / 석사학위논문(Master's Thesis)
+  * 학위논문의 영문명은 고려대 공지사항에 따름
+* `final` / `draft` : 최종 버전 / 드래프트
+* `library` : **도서관 제출본에 반드시 추가**
+  * 논문 내 빈페이지 모두 제거
+* `twosides` / `oneside` : 양면 / 단면 출력
+* `krabst` : 국문초록 포함
 * `asym` : 홀수쪽과 짝수쪽에 제본 여백을 5mm 주고 반대쪽 여백을 5mm 줄임. 대부분의 제본소에서는 중앙에 있는것을 선호함 (제본소 문의 바람)
 
 * 예제
 
-  * 박사학위논문, 최종본, 양면출력, 한글초록 포함
+  * 박사학위논문, 도서관 제출용, 양면출력, 한글초록 포함 (추천)
+`\documentclass[doctor, final, twosides, krabst, library]{KUThesis}`
+
+  * 박사학위논문, 최종 제본용, 양면출력, 한글초록 포함 (추천)
 `\documentclass[doctor, final, twosides, krabst]{KUThesis}`
 
   * 석사학위논문, 최종본, 단면출력
@@ -69,7 +84,7 @@ Index
 
 
 
-수정이 필요한 부분
+수정이 필요한 부분 (Files to Edit)
 =====================
 
 * 메인 파일(thesis.tex) - **수정필수!!**
@@ -80,23 +95,23 @@ Index
   * 소속학과(기본값: Department of Information Security, 정보보호학과), 필요시 대학원명(기본값: Graduate School, 일반대학원) 수정
 
 * 클래스 파일(KUThesis.cls) - 필요에 따라 수정
-  * 학위논문 저자, 교수님 성함, 전공명에 따라 출력되는 줄바꿈 등이 어색할 수 있습니다. 이 경우 에서 직접 해당 부분 줄바꿈(\\\\) 혹은 글자크기(fontsize) 조정 등을 통해 해결하셔야 합니다.
+  * 학위논문 저자, 교수님 성함, 전공명에 따라 출력되는 줄바꿈 등이 어색할 수 있습니다. 이 경우는 직접 해당 부분 줄바꿈(\\\\) 혹은 글자크기(fontsize) 조정 등을 통해 해결하셔야 합니다.
 
 
-제작자
+제작자 (Author)
 ========
 
-### 이수현
-* 고려대학교 사이버국방학과 12학번 / 정보보호대학원 17학번 
-* Email : d.constructuralism@gmail.com
-* Hompage : http://tinyurl.com/suhyeonlee
+### Suhyeon Lee (이수현)
+* B.E. in Cyberdefense and Ph.D. in Cybersecurity at Korea University
+* Email : orion-alpha_at_korea.ac.kr
+* Homepage : http://shlee-lab.github.io
 * Reference :
   * 고려대 핵물리학연구실([nuclear.korea.ac.kr](http://nuclear.korea.ac.kr)) 제작 구 학위논문 LaTeX 템플릿 (https://github.com/KUNPL/KUThesis)
   * 고려대학교 일반대학원 공지사항 (https://graduate.korea.ac.kr/community/notice_view.html?no=659)
 
 
 
-주의사항
+주의사항 (Precaution)
 ====
 
 이 템플릿 파일을 사용해서 발생하는 모든 문제에 대해서 템플릿 작성자들은 어떠한 책임도 지지 않습니다.
